@@ -1,0 +1,13 @@
+*** Okta Common System Log Queries ***
+
+//Password resets for users
+eventType eq "user.account.reset_password"
+
+//Application assignment
+application.user_membership.add
+
+//User lockout
+user.account.lock
+
+//Suspicious Activity
+outcome.reason eq "Authentication failed: bad username or password"
